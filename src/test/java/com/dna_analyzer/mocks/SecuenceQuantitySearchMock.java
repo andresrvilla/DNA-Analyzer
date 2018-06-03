@@ -1,6 +1,6 @@
-package com.dnadetector.mocks;
+package com.dna_analyzer.mocks;
 
-import com.dnadetector.interfaces.search.ISecuenceQuantitySearch;
+import com.dna_analyzer.interfaces.search.ISecuenceQuantitySearch;
 
 public class SecuenceQuantitySearchMock implements ISecuenceQuantitySearch {
 

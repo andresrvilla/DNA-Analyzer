@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DNADetector.iml" filepath="$PROJECT_DIR$/DNADetector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DNA-Analyzer.iml" filepath="$PROJECT_DIR$/DNA-Analyzer.iml" />
     </modules>
   </component>
 </project>

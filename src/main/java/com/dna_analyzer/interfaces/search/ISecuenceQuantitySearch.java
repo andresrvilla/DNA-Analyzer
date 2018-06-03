@@ -1,4 +1,4 @@
-package com.dnadetector.interfaces.search;
+package com.dna_analyzer.interfaces.search;
 
 public interface ISecuenceQuantitySearch {
 

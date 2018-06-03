@@ -1,8 +1,8 @@
-package com.dnadetector.bussiness;
+package com.dna_analyzer.bussiness;
 
-import com.dnadetector.exceptions.InvalidDNASizeException;
-import com.dnadetector.models.DNA;
-import com.dnadetector.models.search.AllDirectionsSequenceQuantitySearch;
+import com.dna_analyzer.bussiness.search.AllDirectionsSequenceQuantitySearch;
+import com.dna_analyzer.exceptions.InvalidDNASizeException;
+import com.dna_analyzer.models.DNA;
 
 public class DNAAnalyzer {
 

@@ -1,6 +1,7 @@
-package com.dnadetector.bussiness;
+package com.dna_analyzer.bussiness;
 
-import com.dnadetector.exceptions.InvalidDNASizeException;
+import com.dna_analyzer.exceptions.InvalidDNASizeException;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -86,6 +87,22 @@ class DNAAnalyzerTest {
     void IsMutantShouldReturnTrue6x6HorizontalOnLimits() throws InvalidDNASizeException {
         String[] dna = {"CCCCAG", "CCGACC", "TTATTT", "TCATGG", "AACCTA", "TCAAAA"};
         assertTrue(DNAAnalyzer.isMutant(dna));
+    }
+
+    @Test
+    void IsMutantShouldThrowExceptionOnInvalidArraySize() {
+        String[] dna = {"CCCCAG", "CCGACC", "TTATTT", "TCATGG", "AACCTA"};
+        Assertions.assertThrows(InvalidDNASizeException.class, () -> {
+            DNAAnalyzer.isMutant(dna);
+        });
+    }
+
+    @Test
+    void IsMutantShouldThrowExceptionOnInvalidLineSize() {
+        String[] dna = {"CCCCAG", "CCGACC", "TTATTT", "TCAGG", "AACCTA", "TCAAAA"};
+        Assertions.assertThrows(InvalidDNASizeException.class, () -> {
+            DNAAnalyzer.isMutant(dna);
+        });
     }
 
 }

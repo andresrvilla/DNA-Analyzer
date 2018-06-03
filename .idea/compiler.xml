@@ -6,13 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DetectorMutante" />
-        <module name="DNADetector" />
+        <module name="DNA-Analyzer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="DetectorMutante" target="1.5" />
-      <module name="DNADetector" target="1.5" />
+      <module name="DNA-Analyzer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

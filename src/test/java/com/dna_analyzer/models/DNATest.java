@@ -1,7 +1,7 @@
-package com.dnadetector.models;
+package com.dna_analyzer.models;
 
-import com.dnadetector.exceptions.InvalidDNASizeException;
-import com.dnadetector.mocks.SecuenceQuantitySearchMock;
+import com.dna_analyzer.exceptions.InvalidDNASizeException;
+import com.dna_analyzer.mocks.SecuenceQuantitySearchMock;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

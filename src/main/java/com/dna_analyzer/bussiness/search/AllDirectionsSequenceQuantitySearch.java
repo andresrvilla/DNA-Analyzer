@@ -1,6 +1,6 @@
-package com.dnadetector.models.search;
+package com.dna_analyzer.bussiness.search;
 
-import com.dnadetector.interfaces.search.ISecuenceQuantitySearch;
+import com.dna_analyzer.interfaces.search.ISecuenceQuantitySearch;
 
 public class AllDirectionsSequenceQuantitySearch implements ISecuenceQuantitySearch {
     public int QuantitySearch(String[] dna, String sequence) {
