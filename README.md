@@ -55,7 +55,7 @@ Se puede probar utilizando [Postman](https://www.getpostman.com/). Puede importa
    * Abra su consola y posicionese en la carpeta previamente creada<br>
    * Ejecute el comando<br>
    
-   <script src="https://gist.github.com/robertoavilla/0310d0fde0951a2bd44dba9f30be41dc.js"></script>
+    git clone https://github.com/robertoavilla/DNA-Analyzer.git
    
    Luego de que termine la descarga, usted tendrá clonado el branch master en la carpeta previamente creada.
 
