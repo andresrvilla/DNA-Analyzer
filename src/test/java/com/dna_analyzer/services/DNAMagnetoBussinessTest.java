@@ -43,15 +43,15 @@ class DNAMagnetoBussinessTest {
         QuantitySearchMock secuenceQuantitySearch = new QuantitySearchMock();
         DNAAnalyzerMock dnaAnalyzerMock = new DNAAnalyzerMock(secuenceQuantitySearch);
         HashMap<String, Long> stats = new HashMap<String, Long>();
-        stats.put("valor1", new Long(1));
-        stats.put("valor2", new Long(2));
+        stats.put("count_mutant_dna", new Long(1));
+        stats.put("count_human_dna", new Long(2));
         DNAAnalyzerStatsMock dnaAnalyzerStatsMock = new DNAAnalyzerStatsMock(stats);
 
 
         DNAMagnetoBussiness dnaMagnetoBussiness = new DNAMagnetoBussiness(dnaDataMock, dnaAnalyzerMock, dnaAnalyzerStatsMock);
         JSONObject result = dnaMagnetoBussiness.stats();
-        assertEquals(result.get("valor1"), (long) 1);
-        assertEquals(result.get("valor2"), (long) 2);
+        assertEquals(result.get("count_mutant_dna"), (long) 1);
+        assertEquals(result.get("count_human_dna"), (long) 2);
         assertEquals(result.get("ratio"), 0.5);
     }
 

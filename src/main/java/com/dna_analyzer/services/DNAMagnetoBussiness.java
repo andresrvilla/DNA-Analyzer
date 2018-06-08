@@ -81,17 +81,16 @@ public class DNAMagnetoBussiness {
             float first = 0;
             float second = 0;
             it = stats.entrySet().iterator();
-            Map.Entry<String, Long> pair = (Map.Entry) it.next(); //Obtengo al primer elemento
-            first = pair.getValue();
-            pair = (Map.Entry) it.next(); //Obtengo el siguiente elemento
-            second = pair.getValue();
-            if (first <= second && second > 0) {
-                result.put("ratio", MathUtils.roundTwoDecimals(first / second));
-            } else if (first > second && first > 0) {
-                result.put("ratio", MathUtils.roundTwoDecimals(second / first));
-            } else {
-                result.put("ratio", "undefined");
+            while (it.hasNext()) {
+                Map.Entry<String, Long> pair = (Map.Entry) it.next();
+                //divido el valor por el minimo para obtener cada ratio
+                if (pair.getKey() == "count_mutant_dna")
+                    first = pair.getValue();
+                else
+                    second = pair.getValue();
             }
+
+            result.put("ratio", MathUtils.roundTwoDecimals(first / second));
         }
 
 
