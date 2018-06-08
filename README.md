@@ -113,6 +113,8 @@ Se ha dividido en:
 
 ## Load Tests
 
+Estos son algunos test de carga básicos que he podido realizar
+
 ![DNA- Analyzer](http://www.andres-villa.com.ar/test1.PNG)
 ![DNA- Analyzer](http://www.andres-villa.com.ar/test2.PNG)
 ![DNA- Analyzer](http://www.andres-villa.com.ar/test3.PNG)
