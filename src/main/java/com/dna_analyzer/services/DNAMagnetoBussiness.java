@@ -83,14 +83,17 @@ public class DNAMagnetoBussiness {
             it = stats.entrySet().iterator();
             while (it.hasNext()) {
                 Map.Entry<String, Long> pair = (Map.Entry) it.next();
-                //divido el valor por el minimo para obtener cada ratio
-                if (pair.getKey() == "count_mutant_dna")
+                String key = pair.getKey();
+                if (key.equals("count_mutant_dna")) {
                     first = pair.getValue();
-                else
+                } else if (key.equals("count_human_dna")) {
                     second = pair.getValue();
+                }
             }
-
-            result.put("ratio", MathUtils.roundTwoDecimals(first / second));
+            if (second != 0)
+                result.put("ratio", MathUtils.roundTwoDecimals(first / second));
+            else
+                result.put("ratio", "undefined");
         }
 
 
