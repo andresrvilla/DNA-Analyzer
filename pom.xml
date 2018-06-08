@@ -22,6 +22,11 @@
             <artifactId>jersey-json</artifactId>
             <version>1.8</version>
         </dependency>
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>2.1.2</version>
+        </dependency>
     </dependencies>
     <repositories>
         <repository>
@@ -36,10 +41,50 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>3.6.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <configuration>
+                    <container>
+                        <containerId>tomcat8x</containerId>
+                        <artifactInstaller>
+                            <groupId>org.apache.tomcat</groupId>
+                            <artifactId>tomcat</artifactId>
+                            <version>8.5.31</version>
+                        </artifactInstaller>
+                    </container>
+                    <configuration>
+                        <type>standalone</type>
+                        <home>
+                            ${project.build.directory}/apache-tomcat-8.5.31
+                        </home>
+                        <properties>
+                            <cargo.servlet.port>8080</cargo.servlet.port>
+                            <cargo.logging>high</cargo.logging>
+                            <cargo.start.jvmargs>
+                                -Xdebug
+                                -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000
+                                -Xnoagent
+                                -Djava.compiler=NONE
+                            </cargo.start.jvmargs>
+                        </properties>
+                    </configuration>
+                    <deployables>
+                        <deployable>
+                            <groupId>${project.groupId}</groupId>
+                            <artifactId>${project.artifactId}</artifactId>
+                            <type>war</type>
+                            <properties>
+                                <context>/${project.artifactId}</context>
+                            </properties>
+                        </deployable>
+                    </deployables>
                 </configuration>
             </plugin>
         </plugins>

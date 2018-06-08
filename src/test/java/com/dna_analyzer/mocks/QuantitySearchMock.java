@@ -1,8 +1,8 @@
 package com.dna_analyzer.mocks;
 
-import com.dna_analyzer.interfaces.search.ISecuenceQuantitySearch;
+import com.dna_analyzer.interfaces.search.IQuantitySearch;
 
-public class SecuenceQuantitySearchMock implements ISecuenceQuantitySearch {
+public class QuantitySearchMock implements IQuantitySearch {
 
     public Boolean Searched = false;
 

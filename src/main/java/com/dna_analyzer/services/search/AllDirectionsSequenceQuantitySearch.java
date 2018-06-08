@@ -1,8 +1,8 @@
-package com.dna_analyzer.bussiness.search;
+package com.dna_analyzer.services.search;
 
-import com.dna_analyzer.interfaces.search.ISecuenceQuantitySearch;
+import com.dna_analyzer.interfaces.search.IQuantitySearch;
 
-public class AllDirectionsSequenceQuantitySearch implements ISecuenceQuantitySearch {
+public class AllDirectionsSequenceQuantitySearch implements IQuantitySearch {
     public int QuantitySearch(String[] dna, String sequence) {
         int times = 0;
 
@@ -13,7 +13,7 @@ public class AllDirectionsSequenceQuantitySearch implements ISecuenceQuantitySea
 
             //Compongo la diagonal vertical
             String sequenceToAnalyze = "";
-            for (int j = 0; j < dna.length; j++) {
+            for (int j = 0; j < dna.length - 1; j++) {
                 sequenceToAnalyze += dna[j].charAt(i);
             }
 

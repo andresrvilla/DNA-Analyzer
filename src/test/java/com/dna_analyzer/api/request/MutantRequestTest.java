@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MutantRequestTest {
 
     @Test
-    void setDna() {
+    void setDnaShouldSetDnaInObject() {
         MutantRequest mutantRequest = new MutantRequest();
         String[] dna = {"XX", "BB"};
         mutantRequest.setDna(dna);
@@ -15,7 +15,7 @@ class MutantRequestTest {
     }
 
     @Test
-    void getDna() {
+    void getDnaShouldReturnConfiguredDnaFromObject() {
         String[] dna = {"XX", "BB"};
         MutantRequest mutantRequest = new MutantRequest(dna);
         assertEquals(mutantRequest.getDna(), dna);

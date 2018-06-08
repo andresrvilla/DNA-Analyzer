@@ -7,14 +7,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ErrorResponseTest {
 
     @Test
-    void setMessage() {
+    void setMessageShouldSetMessageInObject() {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Unit Test");
         assertEquals(errorResponse.message, "Unit Test");
     }
 
     @Test
-    void getMessage() {
+    void getMessageShouldReturnConfiguredMessageFromObject() {
         ErrorResponse errorResponse = new ErrorResponse();
         errorResponse.setMessage("Unit Test");
         assertEquals(errorResponse.getMessage(), "Unit Test");
