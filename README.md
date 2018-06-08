@@ -111,6 +111,12 @@ Se ha dividido en:
 * Agregar documentación con JavaDocs
 * Se debe completar los tests, especialmente el helper de la base de datos
 
+## Load Tests
+
+![DNA- Analyzer](http://www.andres-villa.com.ar/test1.PNG)
+![DNA- Analyzer](http://www.andres-villa.com.ar/test2.PNG)
+![DNA- Analyzer](http://www.andres-villa.com.ar/test3.PNG)
+
 ## Atribuciones de terceros
 * [Vector de Fondo creado por ikatod](https://www.freepik.es/vector-gratis/vector-de-red-de-fondo-triangulo-de-poligono-abstracto_1306336.htm)
 * Icons made by [Freepik](http://www.freepik.com) from [Flaticon](https://www.flaticon.com/)
